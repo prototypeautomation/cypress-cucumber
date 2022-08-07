@@ -2,7 +2,7 @@
 ### How To Running
 
 1. install cypress follow this link https://docs.cypress.io/guides/getting-started/installing-cypress
-2. extract file node_module.zip in the cypress directory
+2. extract file node_modules.zip in the cypress directory
 3. open folder cypress in visual studio code
 4. open terminal
 5. write this comment ```npx cypress open```
