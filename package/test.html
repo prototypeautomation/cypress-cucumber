@@ -1,0 +1,418 @@
+<html class="login-html" lang="en"><head><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}</style>
+    <!-- metas -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="">
+    <title>CIMB NIAGA smart</title>
+    <meta name="msapplication-TileColor" content="#9f00a7">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- icons -->
+    <link rel="icon" type="image/png" href="https://smart.jojonomic.com/jojopro/public/assets/img/login/cimb/cimb-icon.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="https://smart.jojonomic.com/jojopro/public/assets/img/login/cimb/cimb-icon.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="https://smart.jojonomic.com/jojopro/public/assets/img/login/cimb/cimb-icon.png" sizes="16x16">
+    <link rel="shortcut icon" href="https://smart.jojonomic.com/jojopro/public/assets/img/login/cimb/cimb-icon.png">
+
+    <!-- csss -->
+    <link href="https://smart.jojonomic.com/jojopro/public/assets/css/lib/bootstrap.min.css" rel="stylesheet">
+    <link href="https://smart.jojonomic.com/jojopro/public/assets/css/style.css" rel="stylesheet">
+    <link href="https://smart.jojonomic.com/jojopro/public/assets/css/style_login.css" rel="stylesheet">
+    <link href="https://smart.jojonomic.com/jojopro/public/assets/css/style_login_cimb.css" rel="stylesheet">
+    <!-- jss -->
+    <script src="https://smart.jojonomic.com/jojopro/public/assets/js/lib/jquery.min.js"></script>
+    <script src="https://smart.jojonomic.com/jojopro/public/assets/js/lib/moment.js"></script>
+
+    <script src="https://smart.jojonomic.com/jojopro/public/assets/js/lib/jquery.min.js"></script>
+    <script src="https://smart.jojonomic.com/jojopro/public/assets/lib/jquery-ui/jquery-ui.min.js"></script>
+
+    <script src="https://smart.jojonomic.com/jojopro/public/assets/js/lib/bootstrap.min.js"></script>
+    <script src="https://smart.jojonomic.com/jojopro/public/assets/js/lib/angular.min.js"></script>
+    <script src="https://smart.jojonomic.com/jojopro/public/assets/js/validate.js"></script>
+
+    <script src="https://smart.jojonomic.com/jojopro/public/assets/js/lib/session.js"></script>
+    <script src="https://smart.jojonomic.com/jojopro/public/assets/js/moment/jstz-1.0.4.min.js"></script>
+
+    <link type="text/css" rel="stylesheet" href="https://smart.jojonomic.com/jojopro/public/assets/css/lib/animate.min.css">
+<script>
+    var promise = false;
+    $(document).ready(function() {
+        $("#email_form").focus();
+        $(document).on("change", ".show-password input:checkbox ", function () {
+            var total_checklist = $(".show-password input:checkbox:checked").length;
+            if(promise){
+                if(total_checklist>0){
+                    $( "#inputPassword" ).attr( "type", "text" );
+                    $( "#inputPassword" ).addClass("password-shown");
+                }else{
+                    $( "#inputPassword" ).attr( "type", "password" );
+                }
+            }
+        });
+        $(document).on("click", "#inputPassword", function () {
+            promise = true;
+            $("#inputPassword").val("");
+        });
+        $('<img/>').attr('src', 'assets/img/login/cimb/bg-login-cimb.png').on('load', function() {
+            $(".login-box").show();
+        });
+    });
+</script></head>
+
+<body style="height: 100%" ng-app="validationApp" ng-controller="mainController" class="ng-scope">
+
+<!-- Header Line -->
+<div id="header1"></div>
+<div id="header2"></div>
+<div id="header3"></div>
+<div id="header4"></div>
+<div id="header5"></div>
+
+
+<div class="login-page">
+    <div class="logo-box">
+        <a href="#" style="display:block;">
+            <div class="logo animated zoomIn"></div>
+        </a>
+    </div>
+
+    <div class="login-box animated fadeIn" style="display: block; top: 50%; transform: translateX(-50%) translateY(-50%);" hidden="">
+
+
+
+
+<!-- form -->
+<form role="form" action="https://smart.jojonomic.com/jojopro/public/login" method="post" class="form-floating ng-dirty ng-valid-parse ng-valid ng-valid-required" name="userForm" ng-submit="submitForm(userForm.$valid)" novalidate="">
+    <fieldset>
+
+        <!-- email -->
+        <div class="form-group filled email-group animated fadeInUp">
+            <input required="true" name="email" id="email_form" ng-model="email" type="text" placeholder="Username" class="form-control ng-not-empty ng-dirty ng-valid-parse ng-valid ng-valid-required ng-touched">
+            <input type="hidden" name="" value="">
+            <input type="hidden" name="" value="">
+<!--            <img src="--><!--" class="validator-sign" ng-show="userForm.email.$valid && !userForm.email.$pristine">-->
+        </div>
+        <!-- password -->
+        <div class="form-group filled animated fadeInUp">
+            <input autocomplete="new-password" required="true" name="password" ng-model="password" type="password" placeholder="Password" class="form-control ng-untouched ng-not-empty ng-dirty ng-valid-parse ng-valid ng-valid-required" id="inputPassword">
+            <input type="hidden" name="" value="">
+            <input type="hidden" name="" value="">
+<!--            <img src="--><!--" class="validator-sign" ng-show="userForm.password.$valid && !userForm.password.$pristine">-->
+        </div>
+
+        <div class="row row-checkbox animated fadeInUp">
+            <!-- show pass -->
+            <div class="col-md-6 col-sm-12 col-xs-12 form-group">
+                <span class="show-password">
+                    <input type="checkbox" name="check_list_selected" id="show" value="oke">
+                    <label for="show"><span></span></label>
+                </span>
+                <label>show password</label>
+            </div>
+
+            <div class="col-md-6 col-sm-12 col-xs-12 form-group" hidden="">
+                <span class="remember-me">
+                    <input type="checkbox" name="check_list_selected" id="remember" value="oke">
+                    <label for="remember"><span></span></label>
+                </span>
+                <label>remember me</label>
+            </div>
+        </div>
+
+        <div class="row animated fadeInUp" style="margin:0 0 10px 0;" hidden="">
+            <div class="g-recaptcha" data-sitekey="6LfHLYgUAAAAAPU9vTlMzrZW-g9TIJ6YoGUOTX3z"></div>
+        </div>
+
+        <div id="apa-ini"></div>
+        <div class="row" style="margin:0;" hidden="">
+                                </div>
+
+        <!-- buttons -->
+        <div class="cimb row btn-container-wrapper animated fadeInUp">
+            <!-- login -->
+            <div class="col-md-12 col-sm-6 col-xs-6 btn-container left" style="width: 96%;">
+                <button type="submit" name="LoginButton" id="LoginButton" class="btn btn-jojo" ng-disabled="userForm.$invalid">Login</button>
+            </div>
+            <!-- register
+            <div class="col-md-6 col-sm-6 col-xs-6 btn-container right">
+                <a href="https://smart.jojonomic.com/jojopro/public/register/user?select=REGISTER">
+                    <button type="button" class="btn btn-jojo btn-inactive">Register</button>
+                </a>
+            </div> -->
+        </div>
+
+    </fieldset>
+</form>
+</div>
+
+</div>
+<!-- pop-up if use mobile -->
+
+<style>
+    html, body{
+        background-color: transparent;
+    }
+
+    hr.short{
+        margin-top: 20px;
+        margin-bottom: 20px;
+        border: 0;
+        border-top: 5px solid #eee;
+
+        width:100px;
+    }
+
+    h1, h2, h3, h4, h5, h6{
+        color: #03a9f4;
+    }
+
+    h3{
+        font-size: 1.825em;
+    }
+
+    p#modalText{
+        /*font-size: 13pt;*/
+        color: #505050;
+        line-height: 23px;
+        font-weight: 500;
+    }
+
+    .footer{
+        bottom: 0px;
+        position: relative;
+    }
+
+    .modal-content {
+        position: relative;
+        background-color: #fff;
+        -webkit-background-clip: padding-box;
+        background-clip: padding-box;
+        border: 1px solid #999;
+        border: 1px solid rgba(0, 0, 0, .2);
+        border-radius: 6px;
+        outline: 0;
+        -webkit-box-shadow: 0 0px 0px rgba(255, 255, 255, .5);
+        box-shadow: 0 0px 0px rgba(255, 255, 255, 0.5);
+    }
+
+    .modal-dialog {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .modal-content {
+        height: auto;
+        min-height: 100%;
+        border-radius: 0;
+    }
+
+    .close#large {
+        float: right;
+        font-size: 35px;
+        font-weight: bold;
+        line-height: 1;
+        color: #000;
+        text-shadow: 0 1px 0 #fff;
+        filter: alpha(opacity=20);
+        opacity: 1;
+    }
+
+</style>
+
+<div class="modal fade" id="popup-mobile" tabindex="-1" role="dialog" aria-labelledby="gridSystemModalLabel">
+    <div class="modal-dialog" role="document" style="margin:0px;">
+        <div class="modal-content" style="margin:0px; border:0px; -webkit-border-radius: 0px !important; -moz-border-radius: 0px !important;    border-radius: 0px !important; ">
+            <div class="modal-header">
+                <button type="button" class="close" id="large" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                <h4 class="modal-title" id="gridSystemModalLabel"></h4>
+            </div>
+            <div class="modal-body">
+                <div class="wrapper">
+                    <div class="main">
+                        <div class="container">
+                            <!-- here you can add your content -->
+                            <div class="section text-center section-landing" style="padding:50px 0;">
+                                <div class="row">
+                                    <div class="col-md-offset-5 col-md-2 col-xs-offset-4 col-xs-4"> <img src="https://smart.jojonomic.com/jojopro/public/assets/img/logo_jojonomicpro.png" class="img-responsive center-block" style="width:60%;">
+                                        <br>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-4 col-md-offset-4 col-xs-12 col-xs-offset-0">
+                                        <h3 class="text-center"><strong>For better experience, simply go to <br> Jojonomic Pro App</strong></h3>
+                                        <!-- <hr class="short"> -->
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-4 col-md-offset-4 col-xs-12 col-xs-offset-0">
+                                        <br>
+                                        <p id="modalText" class="text-center">Oops! It seems not all feature can work at your mobile browser. But don’t worry, just download or open the app to see
+                                            what your Admin has set you.</p>
+                                    </div>
+                                </div>
+                                <!-- footer-->
+                                <div class="footer">
+                                    <div class="row">
+                                        <div class="col-md-4 col-md-offset-4 col-xs-12">
+                                            <!--                                            <br>-->
+                                            <a id="gotosotre" href="https://play.google.com/store/apps/details?id=com.jojonomic.jojonomicpro" class="btn btn-primary" style="width: 60%;">Continue</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+
+
+
+
+<script type="text/javascript">
+
+    $(document).ready(function(){
+        /**
+         * Determine the mobile operating system.
+         * This function returns one of 'iOS', 'Android', 'Windows Phone', or 'unknown'.
+         *
+         * @returns {String}
+         */
+        getMobileOperatingSystem();
+        function getMobileOperatingSystem() {
+            var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+            // Windows Phone must come first because its UA also contains "Android"
+            if (/windows phone/i.test(userAgent)) {
+                console.log("Windows Phone");
+
+                // Show the Modal on load
+                $("#popup-mobile").modal("show");
+            }
+
+            if (/android/i.test(userAgent)) {
+                console.log("Android");
+
+                // Show the Modal on load
+                $("#popup-mobile").modal("show");
+            }
+
+            // iOS detection from: http://stackoverflow.com/a/9039885/177710
+            if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+                console.log("iPad|iPhone|iPod");
+                $("a[id='gotosotre']").attr('href', 'https://itunes.apple.com/id/app/jojonomicpro-expense-reimbursement/id1090810775?mt=8');
+
+                // Show the Modal on load
+                $("#popup-mobile").modal("show");
+
+            }
+
+            return "unknown";
+        }
+
+    });
+
+
+    function getKeyCodeFromEvent(e) {
+        if (typeof e == "object" && typeof e.which == "number") {
+            return e.which;
+        }
+        return window.event.keyCode;
+    }
+
+    $('input.filter-char').on('keypress', function (event) {
+        var keyCode = getKeyCodeFromEvent(event);
+        if([0,8,9,37,39,46].indexOf(keyCode) !== -1 || event.ctrlKey || event.metaKey) {
+            return true;
+        }
+        var charReg = /^\s*[a-zA-Z0-9@._\-\b]$/;
+//        var charReg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+        var regex = new RegExp(charReg);
+        var key = String.fromCharCode(!event.charCode ? event.which : event.charCode);
+        if (!regex.test(key)) {
+            event.preventDefault();
+            return false;
+        }
+    });
+    /*Object.defineProperty(console, '_commandLineAPI',
+     { get : function() {
+     throw 'Sorry, for security reasons, the script console is deactivated on https://pro.jojonomic.com';
+     } });
+
+     with ((window && window.console && window.console._commandLineAPI) || {}) {
+     // your script here.
+     }*/
+
+
+
+
+    Session.set('xero_timer_js', 0);
+
+    // toggle show password
+    (function ($) {
+        $.toggleShowPassword = function (options) {
+            var settings = $.extend({
+                field: "#password",
+                control: "#toggle_show_password"
+            }, options);
+
+            var control = $(settings.control);
+            var field = $(settings.field);
+
+            control.bind('click', function () {
+                if (control.is(':checked')) {
+                    field.attr('type', 'text');
+                    field.addClass('password-shown');
+                } else {
+                    field.attr('type', 'password');
+                    field.removeClass('password-shown');
+                }
+            })
+        };
+    }(jQuery));
+
+    //Here how to call above plugin from everywhere in your application document body
+    $.toggleShowPassword({
+        field: '#inputPassword',
+        control: '#show_password'
+    });
+
+    // fix scroll device
+    $(document).ready( function() {
+
+        if ($(window).height() <= $(".login-box").height()) {
+            $("body").css("height","auto");
+            $(".login-page").css("background","transparent");
+            $(".login-box").css("top","30px");
+            $(".login-box").css("-ms-transform","translateX(-50%)");
+            $(".login-box").css("-webkit-transform","translateX(-50%)");
+            $(".login-box").css("transform","translateX(-50%)");
+        }
+
+    });
+
+    $(window).resize( function() {
+        if ($(window).height() <= $(".login-box").height()) {
+            $("body").css("height","auto");
+            $(".login-page").css("background","transparent");
+            $(".login-box").css("top","30px");
+            $(".login-box").css("-ms-transform","translateX(-50%)");
+            $(".login-box").css("-webkit-transform","translateX(-50%)");
+            $(".login-box").css("transform","translateX(-50%)");
+        } else {
+            $(".login-box").css("top","50%");
+            $(".login-box").css("-ms-transform","translateX(-50%) translateY(-50%)");
+            $(".login-box").css("-webkit-transform","translateX(-50%) translateY(-50%)");
+            $(".login-box").css("transform","translateX(-50%) translateY(-50%)");
+        }
+    });
+
+</script>
+
+
+
+</div></body><!--<script src="--><!--assets/js/public.js"></script>--></html>

@@ -1,0 +1,24 @@
+{
+  "name": "testmochachai",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha './package/*.spec.js'",
+    "nyoba": "mocha './package/*.spec.js'"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^4.3.6",
+    "cypress": "^9.6.1",
+    "cypress-cucumber-preprocessor": "^4.3.1",
+    "mocha": "^10.0.0",
+    "selenium-webdriver": "^4.1.2",
+    "sinon": "^14.0.0"
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": true
+  }
+
+}
